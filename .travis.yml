@@ -1,11 +1,18 @@
 language: node_js
 node_js:
-- "node"
+- node
 dist: trusty
 sudo: required
 addons:
-  chrome: stable # have Travis install chrome stable.
+  chrome: stable
 install:
 - npm install
 script:
 - npx ng test
+deploy:
+  provider: heroku
+  app: booze-hunter
+  on:
+    repo: DaemonWill/booze-hunter
+  api_key:
+    secure: iDINh8GkalPl6THxHq06iYuh3hpghFwfQoxPcZ0zgwGMAJQeV8wloF/vAMfnrPYjcLjCXZmfAXtQbcxOi8EtI3qVucIExC9mC5hzdgo6WBqsteWKuQaGKeAwY7qxKaZJ1bDEd1DU/KXYYAM7SFTIMr7O/ppHqBOSiz+3gP0lXIWPv1+DfnC/YMkGtzdiqly8/huzJFkXW4/aqEWM7NZ/m2aNSJrciA9A1CiFjFAISlrTTg+rX7tXFxt3IECSpghJ2ycm7z19JiJhH8AWUDZRiLO/7CnC7FxV6taWl9fpWqtqdn0XyZlLP7jI6ZjeJysFh6MmD7Mp7s/Xbi3+iN3YFDDPo4NWSjFhifH7TkApVUksGyMvubYDRKwlxj1U2dc/f7AJVHzwcUEFnv+SPlY9SpHz1+Ettl4T3I+NI5d7n4SYn8igerJPmrnOLjRRUOQ6MYiY406FpOciD/3b6w6cslZwE1jBeYLkggS34IdHkxPjmnnMS/21OQ0u/xHEK6KhqH2BdKa9PSQRbnnVR4bgTofx7teHLWAhQVXuAzCozsUxL2MDyH5meONonsFkivr9ABvMUKpVovrL0mHqM3whMm9zduv2Y6DMtmARfqgdA1IT3Y2ZDBqViYCI/J5GDBSyoXLOWQ/tE5/dFBcaiO9fRscKRS9KPMihz8dxa2ZmVgc=
