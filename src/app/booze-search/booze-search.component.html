@@ -1,0 +1,10 @@
+<div>
+  <span>
+    Product: <input type="text" [(ngModel)]="searchParams.query" required name="query" />
+    Location: <input type="text" [(ngModel)]="searchParams.location"  name="location" />
+  </span>
+  <div>
+    <!-- hide form upon submission -->
+    <button class="btn btn-success" (click)="searchProducts()">Hunt!</button>
+  </div>
+</div>

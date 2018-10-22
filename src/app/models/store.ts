@@ -19,7 +19,7 @@ export class Store {
     return this.name;
   };
   public getAddress(){
-    return this.producerName;
+    return this.address;
   };
   public getId(){
     return this.id;

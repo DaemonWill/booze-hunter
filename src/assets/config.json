@@ -1,0 +1,9 @@
+{
+  "LCBO_KEY" : "Token MDo2OWYwYTBkYS1kNWM0LTExZTgtOTBhNC1hM2I0YTY1MGVkNzY6MGZNVlM2YnQxMlE4ZFZkMkhQUFh0alFLY0c3YnI2TFRQQzhh",
+  "BASE_URL" : "https://lcboapi.com/",
+  "APP_URL" : "https://booze-hunter.herokuapp.com/",
+  "TRAVIS_URL" : "https://travis-ci.org/DaemonWill/booze-hunter",
+  "REPO_URL" : "https://github.com/DaemonWill/booze-hunter",
+  "PRODUCT_WHERE_NOT" : "&where_not=is_dead,is_discontinued",
+  "STORE_WHERE_NOT" : "&where_not=is_dead"
+}

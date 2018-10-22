@@ -4,11 +4,12 @@
   "description": "Search what stores in your area sell your favorite drinks!",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node --optimize_for_size --max_old_space_size=460 server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "repository": {
     "type": "git",
@@ -30,15 +31,16 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
-    "core-js": "^2.5.4",
-    "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
-  },
-  "devDependencies": {
     "@angular/cli": "~7.0.2",
     "@angular-devkit/build-angular": "~0.10.0",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
+    "core-js": "^2.5.4",
+    "rxjs": "~6.3.3",
+    "zone.js": "~0.8.26",
+    "typescript": "~3.1.1"
+  },
+  "devDependencies": {
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -52,7 +54,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
-    "typescript": "~3.1.1"
+    "tslint": "~5.11.0"
   }
 }
