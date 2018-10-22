@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DaemonWill/booze-hunter.git"
