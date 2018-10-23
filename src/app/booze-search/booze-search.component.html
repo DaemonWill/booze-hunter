@@ -1,10 +1,28 @@
 <div>
   <span>
     Product: <input type="text" [(ngModel)]="searchParams.query" required name="query" />
-    Location: <input type="text" [(ngModel)]="searchParams.location"  name="location" />
+    <button class="btn btn-success" (click)="setLocation()">Use Current Location</button>
   </span>
   <div>
     <!-- hide form upon submission -->
     <button class="btn btn-success" (click)="searchProducts()">Hunt!</button>
   </div>
 </div>
+<ul *ngIf="products && products.length > 0">
+  <li *ngFor="let product of products">
+     {{product.getImgUrl()}}
+     {{product.getName()}}
+     {{product.getProducerName()}}
+     <button class="btn btn-success" (click)="selectProduct(product)">select</button>
+  </li>
+</ul>
+<div *ngIf="selectedProduct" >
+  <!-- hide form upon submission -->
+  <button class="btn btn-success" (click)="searchStores()">Locate Booze!</button>
+</div>
+<ul *ngIf="stores && stores.length > 0">
+  <li *ngFor="let i of [0,1,2,3]">
+     {{stores[i].getLatitude()}}
+     {{stores[i].getLongitude()}}
+  </li>
+</ul>
