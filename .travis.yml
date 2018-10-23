@@ -7,8 +7,6 @@ addons:
   chrome: stable
 install:
 - npm install
-script:
-- npx ng test
 deploy:
   provider: heroku
   app: booze-hunter
