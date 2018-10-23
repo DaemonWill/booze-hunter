@@ -1,0 +1,20 @@
+#header {
+  padding: 4px 10px;
+  background-color: sandybrown;
+  line-height: 40px;
+  font-family: calibri;
+  font-variant: small-caps;
+  color: brown;
+  font-size: xx-large;
+}
+#greeting{
+
+}
+#splashDiv {
+    text-align: center;
+    margin-top: 30px;
+}
+img.splash {
+    height: 150px;
+    width: 150px;
+}

@@ -1,0 +1,96 @@
+#map{
+  height : 500px;
+  width : 500px;
+  margin-top: 10px;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+}
+img{
+  height : 50px;
+  width : 37.5px;
+}
+span > p {
+  display: inline;
+  margin-right: -6px;
+  background-color: royalblue;
+  padding: 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: Verdana;
+  color: white;
+}
+section{
+  text-align: center;
+  margin-top: 30px;
+}
+input{
+  width: 30%;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: burlywood;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+button.drinkButton {
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    color: MidnightBlue;
+    background: Chocolate;
+    font-family: cursive;
+    font-size: inherit;
+    border-color: darkslategrey;
+}
+button.drinkButton:hover {
+    background-color: maroon;
+    color: snow;
+}
+#productList{
+  display: table-table-row;
+  margin-top: 10px;
+}
+#storeList{
+  display: table-table-row;
+  margin-top: 10px;
+}
+div.storeListHolder{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+span > img{
+  display: inline;
+  vertical-align: middle;
+}
+span > h4{
+  display: inline;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+span > button{
+  display: inline;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+button.shopButton {
+  background-color: darkred;
+  padding: 14px;
+  border-radius: 8px;
+  border-color: midnightblue;
+  color: aliceblue;
+  font-size: larger;
+  font-family: sans-serif;
+}
+button.shopButton:hover {
+  background-color: snow;
+  color: darkred;
+  border-color: Black;
+}
+#mapHolder{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 30%;
+}

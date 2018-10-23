@@ -1,28 +1,38 @@
-<div>
-  <span>
-    Product: <input type="text" [(ngModel)]="searchParams.query" required name="query" />
-    <button class="btn btn-success" (click)="setLocation()">Use Current Location</button>
-  </span>
-  <div>
-    <!-- hide form upon submission -->
-    <button class="btn btn-success" (click)="searchProducts()">Hunt!</button>
+<section id="drinkSection">
+  <div id="drinkSearch">
+    <span>
+      <p> Drink: </p><input type="text" [(ngModel)]="searchParams.query" required name="query" />
+    </span>
+    <div>
+      <button class="btn drinkButton" (click)="searchProducts()">Search Drinks</button>
+    </div>
   </div>
-</div>
-<ul *ngIf="products && products.length > 0">
-  <li *ngFor="let product of products">
-     {{product.getImgUrl()}}
-     {{product.getName()}}
-     {{product.getProducerName()}}
-     <button class="btn btn-success" (click)="selectProduct(product)">select</button>
-  </li>
-</ul>
-<div *ngIf="selectedProduct" >
-  <!-- hide form upon submission -->
-  <button class="btn btn-success" (click)="searchStores()">Locate Booze!</button>
-</div>
-<ul *ngIf="stores && stores.length > 0">
-  <li *ngFor="let store of stores">
-     {{store.getLatitude()}}
-     {{store.getLongitude()}}
-  </li>
-</ul>
+  <div *ngIf="products && products.length > 0 && !hideProducts">
+    <span id="productList" *ngFor="let product of products">
+       <img src="{{product.getImgUrl()}}">
+       <h4>{{product.getName()}}</h4>
+       <h4>{{product.getProducerName()}}</h4>
+       <button class="btn drinkBtn" (click)="selectProduct(product)">select</button>
+     <br/>
+    </span>
+  </div>
+</section>
+
+<section id="storeSection">
+  <div *ngIf="selectedProduct" >
+    <!-- hide form upon submission -->
+    <button class="btn shopButton" (click)="searchStores()">The Hunt is On!</button>
+  </div>
+
+  <div class="storeListHolder" *ngIf="stores && stores.length > 0">
+    <span id="storeList" *ngFor="let store of stores">
+      <h4> Shop {{stores.indexOf(store) + 1}} : </h4>
+       <h4>Lat: {{store.getLatitude()}}</h4>
+       <h4>Lon: {{store.getLongitude()}}</h4>
+       <br/>
+    </span>
+  </div>
+  <div id="mapholder">
+    <div id="map"></div>
+  </div>
+</section>
