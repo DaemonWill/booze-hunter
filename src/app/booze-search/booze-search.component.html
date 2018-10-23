@@ -21,8 +21,8 @@
   <button class="btn btn-success" (click)="searchStores()">Locate Booze!</button>
 </div>
 <ul *ngIf="stores && stores.length > 0">
-  <li *ngFor="let i of [0,1,2,3]">
-     {{stores[i].getLatitude()}}
-     {{stores[i].getLongitude()}}
+  <li *ngFor="let store of stores">
+     {{store.getLatitude()}}
+     {{store.getLongitude()}}
   </li>
 </ul>

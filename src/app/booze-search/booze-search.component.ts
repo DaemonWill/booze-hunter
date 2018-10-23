@@ -74,8 +74,9 @@ export class BoozeSearchComponent implements OnInit {
     for(let i = 0; i < 4; i++){
       let store = data[i];
       let address = store.address_line_1 + "; " + store.postal_code;
-      this.stores.push(new Store(store.name, address, store.id, store.lat, store.lon));
+      this.stores.push(new Store(store.name, address, store.id, store.latitude, store.longitude));
     }
+    console.log(this.stores);
   }
 
   public selectProduct(newProd : Product) : void {
