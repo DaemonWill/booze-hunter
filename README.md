@@ -1,3 +1,5 @@
+*NOTE* the api used for searching stores and drinks has been discontinued
+
 # booze-hunter
 Search what stores in your area sell your favorite drinks!
 
